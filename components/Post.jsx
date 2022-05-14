@@ -9,9 +9,10 @@ import { useState } from "react";
 import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
 import ReplyRoundedIcon from "@mui/icons-material/ReplyRounded";
 import CommentOutlinedIcon from "@mui/icons-material/CommentOutlined";
-import { modalState, modalType } from "../atoms/modalAtom";
+import { modalState, modalType } from "../atoms/ModalAtom";
 import TimeAgo from "timeago-react";
 import { useSession } from "next-auth/react";
+import Image from "next/image";
 
 function Post({ post, modalPost }) {
     const { data: session } = useSession();
@@ -77,9 +78,9 @@ function Post({ post, modalPost }) {
             )}
 
             {post.photoUrl && !modalPost && (
-                <img
+                <Image
                     src={post.photoUrl}
-                    alt=""
+                    alt="post_photo"
                     className="w-full cursor-pointer"
                     onClick={() => {
                         setModalOpen(true);

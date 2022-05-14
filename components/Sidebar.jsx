@@ -12,7 +12,7 @@ function Sidebar() {
             {/* Top */}
             <div className="bg-white dark:bg-[#1D2226] rounded-lg overflow-hidden relative flex flex-col items-center text-center border border-gray-300 dark:border-none">
                 <div className="relative w-full h-14">
-                    <Image src="https://rb.gy/i26zak" layout="fill" priority />
+                    <Image src="https://rb.gy/i26zak" layout="fill" priority alt="background" />
                 </div>
                 <Avatar
                     onClick={signOut}
@@ -22,11 +22,11 @@ function Sidebar() {
                 <div className="mt-5 py-4 space-x-0.5">
                     <h4 className="hover:underline decoration-purple-700 underline-offset-1 cursor-pointer">
                         {session?.user?.name}
-                        {/* Naim Hossen */}
+
                     </h4>
                     <p className="text-black/60 dark:text-white/75 text-sm">
                         {session?.user?.email}
-                        {/* naimhossen2222@gmail.com */}
+
                     </p>
                 </div>
 

@@ -41,6 +41,7 @@ function Widgets({ articles }) {
                         layout="fill"
                         objectFit="contain"
                         priority
+                        alt="ads"
                     />
                 </div>
             </div>
