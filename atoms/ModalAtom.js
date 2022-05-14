@@ -8,6 +8,6 @@ export const modalState = atom({
 })
 
 export const modalType = atom({
-    key: "modalTypeState",
+    key: "modalType",
     default: "dropIn"
 })
