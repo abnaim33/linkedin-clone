@@ -23,7 +23,7 @@ function Feed({ posts }) {
     };
 
     fetchPosts();
-  }, [handlePost]);
+  }, [handlePost, setHandlePost, setUseSSRPosts]);
 
   console.log(realtimePosts)
 
