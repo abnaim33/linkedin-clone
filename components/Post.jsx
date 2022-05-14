@@ -38,7 +38,7 @@ function Post({ post, modalPost }) {
     // console.log(post)
     return (
         <div
-            className={`bg-white dark:bg-[#1D2226] ${modalPost ? "rounded-r-lg" : "rounded-lg"
+            className={`bg-white dark:bg-[#1D2226]  ${modalPost ? "rounded-r-lg" : "rounded-lg"
                 } space-y-2 py-2.5 border border-gray-300 dark:border-none`}
         >
             <div className="flex items-center px-2.5 cursor-pointer">
@@ -87,6 +87,9 @@ function Post({ post, modalPost }) {
                         setModalTypeState("gifYouUp");
                         setPostState(post);
                     }}
+
+                    width={600}
+                    height={400}
                 />
             )}
 

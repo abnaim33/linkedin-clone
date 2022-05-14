@@ -2,16 +2,14 @@
 import { AnimatePresence } from 'framer-motion'
 import { getSession, useSession } from 'next-auth/react'
 import Head from 'next/head'
-import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useRecoilState } from 'recoil'
-import { modalState, modalType } from '../atoms/ModalAtom'
+import { modalState, modalType } from '../atoms/modalAtom'
 import Feed from '../components/Feed'
 import Header from '../components/Header'
 import Modal from '../components/Modal'
 import Sidebar from '../components/Sidebar'
 import Widgets from '../components/Widgets'
-import styles from '../styles/Home.module.css'
 import { connectToDatabase } from '../util/mongodb'
 
 export default function Home({ posts, articles }) {
@@ -82,7 +80,7 @@ export async function getServerSideProps(context) {
   const results = await fetch(
     `https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.NEWSAPI_KEY}`
   ).then((res) => res.json());
-  console.log(results)
+
   return {
     props: {
       session,
