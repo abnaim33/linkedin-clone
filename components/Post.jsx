@@ -9,7 +9,7 @@ import { useState } from "react";
 import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
 import ReplyRoundedIcon from "@mui/icons-material/ReplyRounded";
 import CommentOutlinedIcon from "@mui/icons-material/CommentOutlined";
-import { modalState, modalType } from "../atoms/ModalAtom";
+import { modalState, modalType } from "../atoms/modalAtom";
 import TimeAgo from "timeago-react";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
